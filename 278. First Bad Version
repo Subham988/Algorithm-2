@@ -1,0 +1,17 @@
+ int firstBadVersion(int n) {
+        long long int mid, i=1,j=n;
+        int ans=1;
+        while(i<=j)
+        {
+             mid=(i+j)/2;
+            bool b=isBadVersion(mid);
+            if(b==true)
+            {
+                ans=mid;
+                j=mid-1;
+            }
+            else
+                i=mid+1;
+        }
+        return ans;
+    }
