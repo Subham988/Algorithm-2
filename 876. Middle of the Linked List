@@ -1,0 +1,13 @@
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        ListNode *hare,*tortise;
+        hare=tortise=head;
+        while(hare && hare->next)
+        {
+            hare=hare->next->next;
+            tortise=tortise->next;
+        }
+        return tortise;
+    }
+};
